@@ -1,0 +1,54 @@
+//导航栏宽度
+$nav-width:250px;
+//头部高度
+$LayoutHeader:75px;
+
+
+@mixin labelDom($align, $width, $line-height: "normal"){
+    label {
+      float: left;
+      width: $width + px;
+      text-align: $align;
+      line-height: $line-height + px;
+    }
+    .warp-content {
+        margin-left: $width + px;
+    }
+  }
+  //封装浏览器兼容问题
+  @mixin  webkit($property,$value) {
+    -webkit-#{$property}:$value;
+    -moz-#{$property}:$value;
+    -o-#{$property}:$value;
+    -ms-#{$property}:$value;
+  }
+  
+// .v-modal{
+//   width: 0px !important;
+//   height: 0px !important;
+// }
+.el-dialog__body{
+  padding: 30px;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.newly_buttons{
+  .el-form-item__content{
+      display: flex;
+      justify-content: space-around;
+  }
+
+}
+.el-button--primary.btn-danger{    
+  background: #f78989;
+  border-color: #f78989;
+  color: #FFF;
+}
+.from_region{
+  .el-form-item__content{
+    .el-select{
+      width: 110px;
+      margin-right: 20px;
+    }
+  }
+}

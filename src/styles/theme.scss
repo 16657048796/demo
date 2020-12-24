@@ -1,6 +1,40 @@
 @import "./reset.scss";
-@import "./main.scss";
+@import "./config.scss";
 
-body{
-    background: $rg-color;
+// body{
+//     background: $rg-color;
+// }
+//选中的二级菜单样式
+.el-submenu .el-menu-item{
+    font-size: 10px;
+    padding-left: 60px !important;
+    &.is-active{
+        background-color: red !important;
+    }
 }
+//选中的二级菜单样式对应的一级菜单
+li.el-submenu{
+    &.is-opened{
+        .el-submenu__title{
+            background-color: red !important ;
+        }
+    }
+}
+//收缩状态下修改二级菜单样式
+    //文字样式
+    .el-menu-item{
+        line-height: 55px;
+    }
+    .el-submenu{
+        background-color: #344a5f !important;
+    }
+    //二级菜单全部背景色
+    .el-menu{
+        background-color: #344a5f !important;
+        .el-menu-item{
+            background-color: #344a5f !important;
+            &:hover{
+                background-color: red !important;
+            }
+        }
+    }
